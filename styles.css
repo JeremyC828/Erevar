@@ -17,21 +17,12 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 150%;
-  max-height: 150%;
-  width: auto;
-  height: auto;
+  width: 1920px; /* Set the original width of the video */
+  height: 1080px; /* Set the original height of the video */
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* Crop the sides to fit */
+  object-position: center; /* Center the video */
   z-index: -1000;
 }
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  video {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-    transform: none;
-    top: 0;
-    left: 0;
-  }
-}
+
