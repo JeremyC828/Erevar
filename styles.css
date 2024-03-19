@@ -4,6 +4,7 @@ body, html {
   height: 100%;
   overflow: hidden;
 }
+
 .video-container {
   position: fixed;
   top: 0;
@@ -12,17 +13,14 @@ body, html {
   height: 100%;
   overflow: hidden;
 }
+
 video {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1920px; /* Set the original width of the video */
-  height: 1080px; /* Set the original height of the video */
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover; /* Crop the sides to fit */
-  object-position: center; /* Center the video */
+  transform: translateX(-50%);
+  height: 100%; /* Set height to 100% */
+  width: auto; /* Set width to auto to maintain aspect ratio */
+  min-width: 100%; /* Ensure the video fills the entire container */
   z-index: -1000;
 }
-
