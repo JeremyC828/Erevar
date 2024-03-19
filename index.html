@@ -14,5 +14,17 @@
             Your browser does not support the video tag.
         </video>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('bg-video');
+            const toggleMute = () => {
+                video.muted = !video.muted;
+            };
+
+            // Toggle mute on click anywhere on the page
+            document.body.addEventListener('click', toggleMute);
+        });
+    </script>
 </body>
 </html>
