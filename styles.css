@@ -3,6 +3,7 @@ body, html {
   padding: 0;
   height: 100%;
   overflow: hidden;
+  background-color: black; /* Set default background color */
 }
 
 .logo-container {
@@ -29,11 +30,10 @@ body, html {
 
 video {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  height: 100%; /* Set height to 100% */
-  width: auto; /* Set width to auto to maintain aspect ratio */
-  min-width: 100%; /* Ensure the video fills the entire container */
-  z-index: -1000;
+  transform: translate(-50%, -50%) scale(0.8); /* Adjust the scale factor as needed */
+  min-width: 100%;
+  min-height: 100%;
 }
+
