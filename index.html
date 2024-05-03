@@ -16,16 +16,29 @@
             max-width: 200px; /* Adjust the max-width as needed */
             height: auto;
         }
+
+        /* Set black background by default */
+        body {
+            background-color: black;
+            margin: 0; /* Reset default margin */
+        }
+
+        /* Media query for larger aspect ratio */
+        @media screen and (min-aspect-ratio: 16/9) {
+            body {
+                background-color: white; /* Change background color for larger aspect ratio */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="logo-container">
-        <img src="erevarlogo.png" alt="Erevar Logo">
+        <img src="replacewith"erevarlogo".png" alt="">
     </div>
 
     <div class="video-container">
         <video autoplay muted loop playsinline id="bg-video">
-             <source src="websitevid1.mp4" type="video/mp4">
+            <source src="websitevid1.mp4" type="video/mp4">
             <!-- Add alternative video formats here -->
             Your browser does not support the video tag.
         </video>
