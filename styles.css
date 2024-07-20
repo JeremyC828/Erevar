@@ -1,0 +1,321 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: black; /* Set default background color */
+  font-family: 'Garamond', serif;
+}
+
+body.preload * {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded * {
+  opacity: 1;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 80px; /* Adjusted to lower the menu text */
+  z-index: 1000;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  margin: 0 40px; /* Increased spacing between text options */
+  position: relative; /* For background blur */
+}
+
+.nav-bar img {
+  width: 60px; /* Adjust size as needed */
+  height: 60px;
+  transition: filter 0.3s, transform 0.3s;
+  filter: brightness(1.4);
+}
+
+.nav-bar a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px; /* Background size */
+  height: 80px;
+  background: rgba(175, 88, 7, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.nav-bar a:hover img {
+  filter: brightness(1.7);
+  transform: scale(1.1);
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8); /* Adjust the scale factor as needed */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 60px; /* Adjust to give space for the navbar */
+}
+
+.main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: white;
+  text-align: center;
+}
+
+.main-content img {
+  display: block;
+  margin: 10px auto;
+}
+
+.main-content img.album-title {
+  width:150px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.main-content img.album-cover {
+  width: 300px; /* Adjust as needed */
+  height: auto;
+  margin-top: 150px;
+}
+
+.music-buttons {
+  margin-top: 20px;
+}
+
+.music-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  margin-top: -20px;
+}
+
+.apple-music-button img {
+  width: 250px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border: none; /* Remove the weird border */
+  transition: filter 0.3s, transform 0.3s;
+  filter: brightness(1.0);
+  border-radius: 10px; /* Make the border rounded */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.apple-music-button img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+
+.spotify-button img {
+  width: 250px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border: none; /* Remove the weird border */
+  transition: filter 0.3s, transform 0.3s;
+  filter: brightness(1.0);
+  border-radius: 10px; /* Make the border rounded */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.spotify-button img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+.content img {
+  display: block;
+  margin: 0 auto;
+}
+
+.content img.lighter-title {
+  width: 250px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: -60px;
+  margin-top: 130px;
+}
+
+.content img.poster {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  margin-top:40px;
+  margin-bottom: 60px;
+}
+
+.content img.poster-price {
+  width: 70px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 10px;
+  transition: filter 0.3s, transform 0.3s, border-color 0.3s;
+  filter: brightness(1.4);
+  border: 2px solid rgba(255, 92, 92, 0.699); /* Add red border */
+  border-radius: 10px; /* Make the border rounded */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.content img.poster-price:hover {
+  filter: brightness(1.7);
+  transform: scale(1.1);
+  border-color: lightcoral; /* Brighten border color on hover */
+}
+
+.content img.lighter {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.youtube-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  z-index: 1000; /* Ensure it is above the video background */
+}
+
+.coming-soon {
+  position: absolute;
+  top: 50%; /* Adjust as needed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  z-index: 2000; /* Ensure it's above other content */
+}
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 120px;
+  grid-row-gap: 60px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto; /* Center the grid horizontally */
+  margin-top: 280px; /* Adjust as needed */
+  width: fit-content; /* Make the grid container fit its content */
+  z-index: 1000; /* Ensure it is above the video background */
+  position: relative;
+  
+}
+
+.youtube-video iframe {
+  width: 364px; /* Adjust width as needed */
+  height: 206px; /* Adjust height as needed */
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .nav-bar a {
+    margin: 0 50px; /* Increased spacing between text options for larger screens */
+  }
+
+  .nav-bar img {
+    width: 80px; /* Increased size for larger screens */
+    height: 80px;
+  }
+
+  .nav-bar a::before {
+    width: 100px; /* Increased background size for larger screens */
+    height: 100px;
+  }
+
+  .content img.poster-title {
+    width: 200px; /* Larger size for larger screens */
+  }
+
+  .content img.poster {
+    width: 200px; /* Larger size for larger screens */
+  }
+
+  .content img.poster-price {
+    width: 100px; /* Larger size for larger screens */
+  }
+  
+
+  .content img.lighter {
+    width: 200px; /* Larger size for larger screens */
+  }
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 767px) {
+  .nav-bar {
+    justify-content: space-around; /* Ensure icons are evenly spaced across the top */
+    flex-direction: row; /* Keep icons in a row */
+    top: 20px; /* Adjust top position for smaller screens */
+  }
+
+  .nav-bar a {
+    margin: 10px 0; /* Adjusted spacing for smaller screens */
+  }
+
+  .nav-bar img {
+    width: 50px; /* Default size for smaller screens */
+    height: 50px;
+  }
+
+  .nav-bar a::before {
+    width: 70px; /* Default background size for smaller screens */
+    height: 70px;
+  }
+
+  .content img.poster-title {
+    width: 100px; /* Smaller size for smaller screens */
+  }
+
+  .content img.poster {
+    width: 150px; /* Smaller size for smaller screens */
+  }
+
+  .content img.poster-price {
+    width: 80px; /* Smaller size for smaller screens */
+  }
+
+  .youtube-grid {
+    grid-template-columns: 1fr; /* Stack videos vertically on smaller screens */
+    grid-gap: 0px;
+  }
+
+  
+  .content img.lighter {
+    width: 150px; /* Smaller size for smaller screens */
+  }
+
+}
