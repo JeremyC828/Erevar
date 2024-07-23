@@ -2,7 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Enable vertical scrolling */
   background-color: black; /* Set default background color */
   font-family: 'Garamond', serif;
 }
@@ -65,6 +66,7 @@ body.loaded * {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 0; /* Ensure the video stays in the background */
 }
 
 video {
@@ -101,7 +103,7 @@ video {
 }
 
 .main-content img.album-title {
-  width:150px; /* Adjust size as needed */
+  width: 150px; /* Adjust size as needed */
   height: auto;
   margin-top: 0px;
   margin-bottom: 30px;
@@ -152,6 +154,7 @@ video {
   filter: brightness(1.2);
   transform: scale(1.1);
 }
+
 .content img {
   display: block;
   margin: 0 auto;
@@ -161,13 +164,13 @@ video {
   width: 250px; /* Adjust size as needed */
   height: auto;
   margin-bottom: -60px;
-  margin-top: 130px;
+  margin-top: 100px;
 }
 
 .content img.poster {
   width: 100px; /* Adjust as needed */
   height: auto;
-  margin-top:40px;
+  margin-top: 40px;
   margin-bottom: 60px;
 }
 
@@ -232,7 +235,6 @@ video {
   width: fit-content; /* Make the grid container fit its content */
   z-index: 1000; /* Ensure it is above the video background */
   position: relative;
-  
 }
 
 .youtube-video iframe {
@@ -267,7 +269,6 @@ video {
   .content img.poster-price {
     width: 100px; /* Larger size for larger screens */
   }
-  
 
   .content img.lighter {
     width: 200px; /* Larger size for larger screens */
@@ -313,9 +314,11 @@ video {
     grid-gap: 0px;
   }
 
-  
   .content img.lighter {
     width: 150px; /* Smaller size for smaller screens */
   }
 
+  .content img.lighter-title {
+    margin-top: 85px;
+  }
 }
