@@ -231,7 +231,7 @@ video {
   align-items: center;
   padding: 20px;
   margin: 0 auto; /* Center the grid horizontally */
-  margin-top: 280px; /* Adjust as needed */
+  margin-top: 180px; /* Adjust as needed */
   width: fit-content; /* Make the grid container fit its content */
   z-index: 1000; /* Ensure it is above the video background */
   position: relative;
