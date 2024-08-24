@@ -320,13 +320,13 @@ video {
 
 /* Media Queries for smaller screens */
 @media (max-width: 767px) {
-  .youtube-video-single {
+  .youtube-video {
     width: 80%;
     max-width: 90vw; /* Make the video width 90% of the viewport width */
     margin: 0 auto 20px auto; /* Center the video and add spacing below */
   }
 
-  .youtube-video-single iframe {
+  .youtube-video iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
