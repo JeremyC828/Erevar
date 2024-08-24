@@ -322,7 +322,7 @@ video {
 @media (max-width: 767px) {
   .youtube-video {
     width: 100%;
-    max-width: 950vw; /* Make the video width 90% of the viewport width */
+    max-width: 90vw; /* Make the video width 90% of the viewport width */
     margin: 0 auto 20px auto; /* Center the video and add spacing below */
   }
 
@@ -334,8 +334,16 @@ video {
   }
 
   .youtube-video-single {
-    aspect-ratio: 4 / 3;
-
+    width: 100%; /* Make the video container take up the full width of its parent */
+    max-width: 1000px; /* Increase this value to make the video larger */
+    margin: 0 auto 40px auto; /* Center the video and add more spacing below */
+  }
+  
+  .youtube-video-single iframe {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
+  
   }
 
   .nav-bar {
