@@ -24,7 +24,7 @@ body.loaded * {
   position: fixed;
   width: 100%;
   top: 80px; /* Adjusted to lower the menu text */
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .nav-bar a {
@@ -67,6 +67,16 @@ body.loaded * {
   height: 100%;
   overflow: hidden;
   z-index: 0; /* Ensure the video stays in the background */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Ensure the video stays in the background */
 }
 
 video {
@@ -222,24 +232,57 @@ video {
   z-index: 2000; /* Ensure it's above other content */
 }
 
+.youtube-video-single {
+  width: 100%; /* Make the video container take up the full width of its parent */
+  max-width: 1000px; /* Increase this value to make the video larger */
+  margin: 0 auto 40px auto; /* Center the video and add more spacing below */
+}
+
+.youtube-video-single iframe {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
+  min-height: 400px; /* Minimum height to ensure the videos are large */
+}
+
 .youtube-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 120px;
-  grid-row-gap: 60px;
+  grid-row-gap: 0px;
   justify-items: center;
   align-items: center;
   padding: 20px;
   margin: 0 auto; /* Center the grid horizontally */
-  margin-top: 180px; /* Adjust as needed */
+  margin-top: 300px; /* Adjust as needed */
   width: fit-content; /* Make the grid container fit its content */
   z-index: 1000; /* Ensure it is above the video background */
   position: relative;
 }
 
 .youtube-video iframe {
-  width: 364px; /* Adjust width as needed */
-  height: 206px; /* Adjust height as needed */
+  margin-top: 130px;
+  width: 900x; /* Adjust width as needed */
+  height: 340px; /* Adjust height as needed */
+}
+
+.music-icons {
+  display: flex;
+  gap: 40px; /* Space between icons */
+  justify-content: center;
+  margin-top: 20px; /* Space between video and icons */
+}
+
+.music-icons .icon {
+  width: 50px; /* Set the icon size */
+  height: 50px;
+  transition: transform 0.3s, filter 0.3s;
+  cursor: pointer;
+}
+
+.music-icons .icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }
 
 /* Media Queries for larger screens */
@@ -322,3 +365,4 @@ video {
     margin-top: 85px;
   }
 }
+
