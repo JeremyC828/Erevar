@@ -320,6 +320,19 @@ video {
 
 /* Media Queries for smaller screens */
 @media (max-width: 767px) {
+  .youtube-video-single {
+    width: 100%;
+    max-width: 90vw; /* Make the video width 90% of the viewport width */
+    margin: 0 auto 20px auto; /* Center the video and add spacing below */
+  }
+
+  .youtube-video-single iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
+    min-height: auto; /* Remove the minimum height constraint for better fit on mobile */
+  }
+  
   .nav-bar {
     justify-content: space-around; /* Ensure icons are evenly spaced across the top */
     flex-direction: row; /* Keep icons in a row */
