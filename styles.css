@@ -343,8 +343,10 @@ video {
     width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
-  
+    min-height: 200px; /* Reduce the minimum height for better fit on mobile */
   }
+
+
 
   .nav-bar {
     justify-content: space-around; /* Ensure icons are evenly spaced across the top */
@@ -373,6 +375,29 @@ video {
   .content img.poster {
     width: 150px; /* Smaller size for smaller screens */
   }
+
+  .content img.poster-price {
+    width: 80px; /* Smaller size for smaller screens */
+  }
+
+  .youtube-grid {
+    grid-template-columns: 1fr; /* Stack videos vertically on smaller screens */
+    grid-gap: 20px; /* Provide some space between videos */
+    margin-top: 50px; /* Adjust the top margin to suit mobile better */
+    padding: 10px; /* Add some padding for better appearance */
+    width: 100%; /* Ensure the grid takes up full width of the screen */
+  }
+
+  .content img.lighter {
+    width: 150px; /* Smaller size for smaller screens */
+  }
+
+  .content img.lighter-title {
+    margin-top: 85px;
+  }
+}
+
+
 
   .content img.poster-price {
     width: 80px; /* Smaller size for smaller screens */
