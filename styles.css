@@ -254,7 +254,7 @@ video {
   align-items: center;
   padding: 20px;
   margin: 0 auto; /* Center the grid horizontally */
-  margin-top: 300px; /* Adjust as needed */
+  margin-top: 400px; /* Adjust as needed */
   width: fit-content; /* Make the grid container fit its content */
   z-index: 1000; /* Ensure it is above the video background */
   position: relative;
@@ -390,7 +390,7 @@ video {
   .youtube-grid {
     grid-template-columns: 1fr; /* Stack videos vertically on smaller screens */
     grid-gap: 20px; /* Provide some space between videos */
-    margin-top: 50px; /* Adjust the top margin to suit mobile better */
+    margin-top: 300px; /* Adjust the top margin to suit mobile better */
     padding: 10px; /* Add some padding for better appearance */
     width: 100%; /* Ensure the grid takes up full width of the screen */
   }
