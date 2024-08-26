@@ -327,7 +327,7 @@ video {
   }
 
   .youtube-video iframe {
-    width: 100%;
+    width: 120%;
     height: auto;
     aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
     min-height: auto; /* Remove the minimum height constraint for better fit on mobile */
