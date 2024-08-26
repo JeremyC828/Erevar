@@ -331,21 +331,27 @@ video {
     height: auto;
     aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
     min-height: auto; /* Remove the minimum height constraint for better fit on mobile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .youtube-video-single {
-    width: 100%; /* Make the video container take up the full width of its parent */
-    max-width: 1000px; /* Increase this value to make the video larger */
-    margin: 0 auto 40px auto; /* Center the video and add more spacing below */
-  }
-  
-  .youtube-video-single iframe {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
-    min-height: 200px; /* Reduce the minimum height for better fit on mobile */
+    display: flex;
+    justify-content: center; /* Center the video horizontally */
+    align-items: center; /* Center the video vertically (if necessary) */
+    width: 100%; /* Ensure the container takes up the full width */
+    max-width: 100%; /* Remove the max-width to prevent any constraints */
+    margin: 0 auto; /* Center the container itself */
   }
 
+  .youtube-video-single iframe {
+    width: 110%; /* Set width to 90% of the container for a bit of padding */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
+    min-height: 200px; /* Ensure a minimum height */
+    margin: 0 auto; /* Center the iframe itself */
+  }
 
 
   .nav-bar {
@@ -380,6 +386,7 @@ video {
     width: 80px; /* Smaller size for smaller screens */
   }
 
+  /* Adjusting the grid layout */
   .youtube-grid {
     grid-template-columns: 1fr; /* Stack videos vertically on smaller screens */
     grid-gap: 20px; /* Provide some space between videos */
