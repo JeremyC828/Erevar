@@ -369,7 +369,7 @@ video {
     height: auto;
     aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
     min-height: auto; /* Remove the minimum height constraint for better fit on mobile */
-    margin-top: 0;
+    margin-top: 30;
   }
 
   .youtube-video-single {
