@@ -237,15 +237,38 @@ video {
 }
 
 .coming-soon {
-  position: absolute;
-  top: 50%; /* Adjust as needed */
+  position: relative; /* Change from absolute to relative if it was absolute */
+  top: 50%; /* Adjust this value to ensure proper positioning */
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
   font-size: 30px;
   text-align: center;
   z-index: 2000; /* Ensure it's above other content */
+  margin-bottom: 480px; /* Add margin to push social media icons down */
 }
+
+.social-media-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 50px; /* Space between icons */
+  margin-top: 20px; /* Space between email and icons */
+  z-index: 2000; /* Ensure it's above other content */
+  position: relative; /* Ensure it follows the flow of the document */
+}
+
+.social-icon {
+  width: 35px; /* Adjust the size of the icons */
+  height: 35px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: brightness(1.0);
+}
+
+.social-icon:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+
 
 .youtube-video-single {
   width: 100%; /* Make the video container take up the full width of its parent */
