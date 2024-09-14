@@ -129,6 +129,52 @@ video {
   margin-top: 20px;
 }
 
+.album-display {
+  position: relative;
+  text-align: center;
+  margin-top: 50px; /* Adjust the spacing as needed */
+}
+
+.album-title {
+  width: 125px!important; /* Adjust size as needed */
+  height: auto;
+  margin-top: 100px !important;/* Space between title and cover */
+  margin-bottom: -140px !important;
+  display: block;
+}
+
+.album-cover {
+  width: 250px; /* Adjust the size of the album cover */
+  height: auto;
+  margin-bottom: 0px!important; /* Space between the cover and date */
+ 
+}
+
+.album-date {
+  width: 80px; /* Smaller size for the date */
+  height: auto;
+  display: block;
+  margin-bottom: -10px!important;
+}
+
+.presave-button {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 20px;
+  transition: filter 0.3s, transform 0.3s, border-color 0.3s;
+  filter: brightness(1.4);
+  border-radius: 10px; /* Make the border rounded */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-bottom: 0px!important;
+}
+
+.presave-button:hover {
+  filter: brightness(1.7);
+  transform: scale(1.1);
+  border-color: lightcoral; /* Brighten border color on hover */
+}
+
+
 .music-buttons a {
   display: inline-block;
   margin: 0 10px;
@@ -437,3 +483,18 @@ video {
   }
 }
 
+
+@media (max-height: 800px) {
+  .main-content {
+      top: calc(50px + 5%); /* Push the content down by a percentage */
+      transform: translate(-50%, 0); /* Keep it horizontally centered, remove vertical centering */
+      padding-top: 20px; /* Add some padding for spacing */
+  }
+
+  .album-display {
+      margin-top: 20px; /* Adjust the margin for smaller screens */
+  }
+  .music-icons {
+    padding-bottom: 200px!important;
+  }
+}
