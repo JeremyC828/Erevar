@@ -160,19 +160,12 @@ video {
 .presave-button {
   width: 150px; /* Adjust size as needed */
   height: auto;
-  margin-top: 20px;
-  transition: filter 0.3s, transform 0.3s, border-color 0.3s;
-  filter: brightness(1.4);
+  margin-top: 0px!important;
+  filter: brightness(0.6);
   border-radius: 10px; /* Make the border rounded */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  margin-bottom: 0px!important;
+  margin-bottom: -15px!important;
 }
 
-.presave-button:hover {
-  filter: brightness(1.7);
-  transform: scale(1.1);
-  border-color: lightcoral; /* Brighten border color on hover */
-}
 
 
 .music-buttons a {
@@ -246,7 +239,7 @@ video {
 }
 
 .content img.poster-price {
-  width: 70px; /* Adjust size as needed */
+  width: 90px; /* Adjust size as needed */
   height: auto;
   margin-top: 10px;
   transition: filter 0.3s, transform 0.3s, border-color 0.3s;
@@ -265,7 +258,7 @@ video {
 .content img.lighter {
   width: 100px; /* Adjust size as needed */
   height: auto;
-  margin-top: 0px;
+  margin-top: 160px;
   margin-bottom: 0px;
 }
 
@@ -394,7 +387,7 @@ video {
   }
 
   .content img.poster-price {
-    width: 100px; /* Larger size for larger screens */
+    width: 80px; /* Larger size for larger screens */
   }
 
   .content img.lighter {
@@ -463,7 +456,7 @@ video {
   }
 
   .content img.poster-price {
-    width: 80px; /* Smaller size for smaller screens */
+    width: 70px; /* Smaller size for smaller screens */
   }
 
   .youtube-grid {
@@ -492,7 +485,7 @@ video {
   }
 
   .album-display {
-      margin-top: 20px; /* Adjust the margin for smaller screens */
+      margin-top: 0px; /* Adjust the margin for smaller screens */
   }
   .music-icons {
     padding-bottom: 200px!important;
