@@ -23,7 +23,7 @@ body.loaded * {
   padding: 10px 0;
   position: fixed;
   width: 100%;
-  top: 80px; /* Adjusted to lower the menu text */
+  top: 100px; /* Adjusted to lower the menu text */
   z-index: 2000;
 }
 
@@ -189,7 +189,7 @@ video {
   padding: 20px 0; /* Add some space around the logo */
   position: fixed;
   width: 100%;
-  top: 10px; /* Adjust top position as needed */
+  top: 25px; /* Adjust top position as needed */
   z-index: 2000; /* Ensure it's above other elements */
 }
 
