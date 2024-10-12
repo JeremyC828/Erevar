@@ -447,7 +447,9 @@ video {
     margin-top: -15px;
   }
   
-
+.sfts-text {
+    margin-top: -30px !important;
+  }
 
 
   .nav-bar {
