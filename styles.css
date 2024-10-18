@@ -19,13 +19,13 @@ body.loaded * {
 
 .sfts-text {
   width: 400px;
-  margin-top: 90px !important;
+  margin-top: 0px !important;
   margin-bottom: -170px !important;
 }
 
 .release-date1018 {
-  width: 100px;
-  margin-top: -15px !important;
+  width: 200px;
+  margin-top: -5px !important;
   margin-bottom: -30px !important;
 }
 
@@ -50,7 +50,7 @@ body.loaded * {
   width: 60px; /* Adjust size as needed */
   height: 60px;
   transition: filter 0.3s, transform 0.3s;
-  filter: brightness(1.4);
+  filter: brightness(2);
 }
 
 .nav-bar a::before {
@@ -214,7 +214,7 @@ video {
 .erevar-logo {
   width: 130px; /* Adjust the width to fit your design */
   height: auto; /* Maintain aspect ratio */
-  filter: brightness(0.82); /* Slightly increase brightness */
+  filter: brightness(1.5); /* Slightly increase brightness */
 }
 
 .apple-music-button img:hover {
@@ -446,10 +446,12 @@ video {
   .erevar-logo {
     margin-top: -15px;
   }
-  
-.sfts-text {
-    margin-top: -15px !important;
+
+  .sfts-text {
+    margin-top: -30px !important;
   }
+  
+
 
 
   .nav-bar {
